@@ -6,6 +6,9 @@
 
 	"modules-left": [
 		"sway/workspaces",
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+		"sway/window",
 		"custom/right-arrow-dark"
 	],
 	"modules-center": [
