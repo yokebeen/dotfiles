@@ -1,7 +1,7 @@
 set $mod Mod4
 set $term gnome-terminal
 set $browser google-chrome-stable
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | dmenu -sb red -sf black | xargs swaymsg exec --
 
 
 output * bg /usr/share/backgrounds/gnome/blobs-d.svg fill
@@ -67,8 +67,6 @@ bindsym --to-code $mod+Shift+8 move container to workspace number 8
 bindsym --to-code $mod+Shift+9 move container to workspace number 9
 bindsym --to-code $mod+Shift+0 move container to workspace number 10
 
-#bindsym --to-code $mod+b splith
-#bindsym --to-code $mod+v splitv
 
 #bindsym --to-code $mod+s layout stacking
 #bindsym --to-code $mod+w layout tabbed
@@ -77,10 +75,6 @@ bindsym --to-code $mod+Shift+0 move container to workspace number 10
 bindsym --to-code $mod+f fullscreen
 
 bindsym --to-code $mod+Shift+f floating toggle
-
-#bindsym --to-code $mod+space focus mode_toggle
-
-#bindsym --to-code $mod+a focus parent
 
 bindsym --to-code $mod+b exec $browser
 bindsym --to-code $mod+e exec nautilus
@@ -110,9 +104,7 @@ input "type:keyboard" {
 input * accel_profile flat
 
 default_border none
-default_border pixel 0
-
-
+default_border pixel 1
 
 
 include /etc/sway/config.d/*
