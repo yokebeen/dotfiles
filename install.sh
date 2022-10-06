@@ -21,13 +21,13 @@ pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader li
 
 # sway -->
 pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu fish --needed -y
-# tofi
+# tofi adw-gtk3
 
 # net -->
 pacman -Syu google-chrome telegram-desktop qbittorrent --needed -y
 
 # gnome -->
-pacman -Syu gnome-browser-connector --needed -y
+pacman -Syu gnome-browser-connector gnome-tweaks --needed -y
 
 # rm - xlam
 pacman -Rsn epiphany gnome-books gnome-calculator gnome-maps gnome-music gnome-weather gnome-photos gnome-software gnome-user-docs totem yelp vino gnome-user-share gnome-characters simple-scan eog rygel gnome-font-viewer gnome-remote-desktop gnome-logs orca

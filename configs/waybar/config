@@ -91,16 +91,9 @@
 	},
 
 	"pulseaudio": {
-		"format": "-{icon}{volume:2}%-",
-		"format-bluetooth": "-{icon}{volume}%-",
+		"format": "-v{volume:2}%-",
+		"format-bluetooth": "-b{volume}%-",
 		"format-muted": "-mute-",
-		"format-icons": {
-			"headphones": "",
-			"default": [
-				"",
-				""
-			]
-		},
 		"scroll-step": 5,
 		"on-click": "pamixer -t",
 		"on-click-right": "pavucontrol"
