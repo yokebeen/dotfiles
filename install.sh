@@ -20,7 +20,8 @@ pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader li
 
 
 # sway -->
-pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard tofi --needed -y
+pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard --needed -y
+# tofi
 
 # net -->
 pacman -Syu google-chrome telegram-desktop qbittorrent --needed -y
