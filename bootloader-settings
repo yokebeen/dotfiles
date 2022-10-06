@@ -1,0 +1,2 @@
+quiet splash rootfstype= lpj= raid=noautodetect elevator=noop mitigations=off preempt=none nowatchdog audit=0
+sudo dmesg | grep "lpj="
