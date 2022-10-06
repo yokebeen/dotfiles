@@ -11,7 +11,10 @@ output * bg /usr/share/backgrounds/gnome/blobs-d.svg fill
 # autostart
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id autotiling
+exec --no-startup-id copyq
 
+
+#bindsym $mod+v exec clipman pick -t tofi
 
 bindsym --to-code Shift+Control+down exec brightnessctl set 10%-
 bindsym --to-code Shift+Control+up exec brightnessctl set +10%
@@ -25,6 +28,15 @@ bindsym --to-code XF86AudioStop exec playerctl stop
 bindsym --to-code XF86AudioPrev exec playerctl previous
 bindsym --to-code XF86AudioNext exec playerctl next
 
+bindsym --to-code $mod+Shift+s exec grimshot save area
+bindsym --to-code $mod+s exec grimshot save active 
+
+#bindsym --to-code $mod+Shift+s exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') #| wl-copy
+#bindsym --to-code $mod+s exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')"
+
+
+bindsym --to-code $mod+c exec wl-copy -p
+bindsym --to-code $mod+v exec wl-paste -p
 
 bindsym --to-code $mod+q kill
 
@@ -100,7 +112,7 @@ swaybar_command waybar
 }
 
 input "type:keyboard" {
-    xkb_layout us,ru
+    xkb_layout us,ru,ua
     # xkb_variant ,nodeadkeys
     xkb_options grp:caps_toggle
 }
