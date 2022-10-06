@@ -8,6 +8,7 @@ pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst
 echo "[chaotic-aur]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
+vim /etc/pacman.conf
 
 pacman -Sy reflector rsync curl --needed -y
 reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
