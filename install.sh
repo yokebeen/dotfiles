@@ -20,7 +20,7 @@ pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader li
 
 
 # sway -->
-pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu --needed -y
+pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu fish --needed -y
 # tofi
 
 # net -->
