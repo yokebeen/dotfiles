@@ -13,7 +13,7 @@ pacman -Syu reflector rsync curl --needed -y
 reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
 
 # sys -->
-pacman -Syu base-devel asp dbus-broker bluez code git playerctl brightnessctl pamixer blueman pavucontrol python-pip yay android-tools neofetch grub-customizer gparted ccache bash-completion  --needed -y
+pacman -Syu base-devel polkit-gnome asp dbus-broker bluez code git playerctl brightnessctl pamixer blueman pavucontrol python-pip yay android-tools neofetch grub-customizer gparted ccache bash-completion  --needed -y
 pacman -Syu lrzip unrar unzip unace p7zip squashfs-tools --needed -y
 
 pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader --needed -y
