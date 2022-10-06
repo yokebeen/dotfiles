@@ -9,7 +9,7 @@ echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
 vim /etc/pacman.conf
 
-pacman -Sy reflector rsync curl --needed -y
+pacman -Syu reflector rsync curl --needed -y
 reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
 
 # sys -->
