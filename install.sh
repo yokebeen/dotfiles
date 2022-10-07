@@ -30,7 +30,7 @@ pacman -Syu google-chrome telegram-desktop qbittorrent --needed -y
 pacman -Syu gnome-browser-connector gnome-tweaks --needed -y
 
 # rm - xlam
-pacman -Rsn epiphany gnome-books gnome-calculator gnome-maps gnome-music gnome-weather gnome-photos gnome-software gnome-user-docs totem yelp vino gnome-user-share gnome-characters simple-scan eog rygel gnome-font-viewer gnome-remote-desktop gnome-logs orca
+pacman -Rsn epiphany cheese gnome-books gnome-calculator gnome-maps gnome-music gnome-weather gnome-photos gnome-software gnome-user-docs totem yelp vino gnome-user-share gnome-characters simple-scan eog rygel gnome-font-viewer gnome-remote-desktop gnome-logs orca
 
 
 systemctl --global enable dbus-broker.service

@@ -94,6 +94,7 @@ bindsym --to-code $mod+Shift+f floating toggle
 bindsym --to-code $mod+b exec $browser
 bindsym --to-code $mod+e exec nautilus
 bindsym --to-code Mod1+Return exec $term
+bindsym --to-code $mod+x exec $term
 
 mode "resize" {
 bindsym --to-code Left resize shrink width 10px
