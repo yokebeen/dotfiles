@@ -99,12 +99,12 @@
 		"on-click-right": "pavucontrol"
 	},
 	"memory": {
-		"interval": 3,
+		"interval": 1,
 		"format": "-m{used:0.1f}/{total:0.1f}-"
 	},
 	"cpu": {
-		"interval": 3,
-		"format": "-c{usage}%-f{avg_frequency}-"
+		"interval": 1,
+		"format": "-c{usage}%-f{avg_frequency:0.1f}-"
 	},
 	"battery": {
 		"states": {
