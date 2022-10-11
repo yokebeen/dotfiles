@@ -28,21 +28,22 @@
 	],
 	"modules-right": [
 		"custom/left-arrow-dark",
-		"pulseaudio",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"memory",
+		"battery",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"cpu",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-		"battery",
+		"memory",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"disk",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
+		"pulseaudio",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+
 		"tray"
 	],
 
@@ -92,9 +93,9 @@
 	},
 
 	"pulseaudio": {
-		"format": "-v{volume:2}%-",
+		"format": "-v{volume}%-",
 		"format-bluetooth": "-b{volume}%-",
-		"format-muted": "-mute-",
+		"format-muted": "-x-",
 		"scroll-step": 5,
 		"on-click": "pamixer -t",
 		"on-click-right": "pavucontrol"
@@ -113,7 +114,8 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "-b{capacity}%-"
+		"format": "-b{capacity}%-",
+		"tooltip": false
 	},
 	"disk": {
 		"interval": 10,
