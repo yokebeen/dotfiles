@@ -28,7 +28,7 @@ bindsym --to-code $mod+Shift+s exec grimshot save area
 bindsym --to-code $mod+s exec grimshot save active 
 
 
-bindsym --to-code Mod1t+q kill
+bindsym --to-code Mod1+q kill
 
 bindsym --to-code Mod1+space exec $menu
 bindsym --to-code $mod+space exec $run
