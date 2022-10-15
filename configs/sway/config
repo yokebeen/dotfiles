@@ -28,9 +28,6 @@ bindsym --to-code $mod+Shift+s exec grimshot save area
 bindsym --to-code $mod+s exec grimshot save active 
 
 
-bindsym --to-code $mod+c exec wl-copy -p
-bindsym --to-code $mod+v exec wl-paste -p
-
 bindsym --to-code Mod1t+q kill
 
 bindsym --to-code Mod1+space exec $menu
@@ -84,8 +81,8 @@ bindsym --to-code $mod+f fullscreen
 
 bindsym --to-code $mod+Shift+f floating toggle
 
-bindsym --to-code $mod+b exec $browser
-bindsym --to-code $mod+e exec nautilus
+bindsym --to-code Mod1+b exec $browser
+bindsym --to-code Mod1+e exec nautilus
 bindsym --to-code Mod1+Return exec $term
 bindsym --to-code Mod1+x exec $term
 
