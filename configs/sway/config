@@ -5,7 +5,7 @@ set $menu tofi-drun --drun-launch=true
 set $run tofi-run | xargs swaymsg exec --
 
 
-output * bg /usr/share/backgrounds/gnome/libadwaita-d.jpg fill
+output * bg /usr/share/backgrounds/gnome/licorice-d.webp fill
 
 # autostart
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
