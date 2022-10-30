@@ -1,36 +1,36 @@
-pacman -Syu -y
+sudo pacman -Syu
 
 # Chaotic-AUR
-pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-pacman-key --lsign-key FBA220DFC880C036
-pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-echo "[chaotic-aur]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key FBA220DFC880C036
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo echo "[chaotic-aur]" >> /etc/pacman.conf
+sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
 
-vim /etc/pacman.conf
+sudo vim /etc/pacman.conf
 
-pacman -Syu reflector rsync curl --needed -y
-reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
+sudo pacman -Syyuu reflector rsync curl --needed
+sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
 
 # sys -->
-pacman -Syu base-devel polkit-gnome asp dbus-broker bluez code git playerctl brightnessctl pamixer blueman pavucontrol python-pip yay android-tools neofetch grub-customizer gparted ccache bash-completion  --needed -y
-pacman -Syu lrzip unrar unzip unace p7zip squashfs-tools --needed -y
+sudo pacman -Syu base-devel polkit-gnome asp dbus-broker bluez code git playerctl brightnessctl pamixer blueman pavucontrol python-pip yay android-tools neofetch grub-customizer gparted ccache bash-completion --needed
+sudo pacman -Syu lrzip unrar unzip unace p7zip squashfs-tools --needed
 
-pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader --needed -y
+sudo pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader --needed
 
 
 # sway -->
-pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu fish --needed -y
+sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu fish adw-gtk3 --needed
 # tofi adw-gtk3
 
 # net -->
-pacman -Syu google-chrome telegram-desktop qbittorrent --needed -y
+sudo pacman -Syu google-chrome telegram-desktop qbittorrent --needed
 
 # gnome -->
-pacman -Syu gnome-browser-connector gnome-tweaks --needed -y
+sudo pacman -Syu gnome-browser-connector gnome-tweaks --needed
 
 # rm - xlam
-pacman -Rsn epiphany cheese gnome-books gnome-calculator gnome-maps gnome-music gnome-weather gnome-photos gnome-software gnome-user-docs totem yelp vino gnome-user-share gnome-characters simple-scan eog rygel gnome-font-viewer gnome-remote-desktop gnome-logs orca
+sudo pacman -Rsn epiphany cheese gnome-books gnome-calculator gnome-maps gnome-music gnome-weather gnome-photos gnome-software gnome-user-docs totem yelp vino gnome-user-share gnome-characters simple-scan eog rygel gnome-font-viewer gnome-remote-desktop gnome-logs orca
 
 
 systemctl --global enable dbus-broker.service
