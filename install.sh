@@ -24,6 +24,7 @@ sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu 
 
 yay -Syu tofi --needed
 
+sudo pacman -Syu imv mpv --needed
 # net -->
 sudo pacman -Syu google-chrome telegram-desktop qbittorrent --needed
 
