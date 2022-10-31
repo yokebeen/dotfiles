@@ -64,4 +64,5 @@ sudo systemctl --user mask org.gnome.SettingsDaemon.Power.service
 
 
 
-
+systemctl enable --now kbct.service
+systemctl enable --now bluetooth.service
