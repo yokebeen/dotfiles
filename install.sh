@@ -18,12 +18,11 @@ sudo pacman -Syu lrzip unrar unzip unace p7zip squashfs-tools --needed
 
 sudo pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader --needed
 
-
 # sway -->
-sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu fish adw-gtk3 --needed
+sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu adw-gtk3 --needed
 # tofi adw-gtk3
 
-yay -Syu tofi
+yay -Syu tofi --needed
 
 # net -->
 sudo pacman -Syu google-chrome telegram-desktop qbittorrent --needed
@@ -47,6 +46,20 @@ systemctl --user mask org.gnome.SettingsDaemon.Sharing.service
 systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
 systemctl --user mask org.gnome.SettingsDaemon.Housekeeping.service
 systemctl --user mask org.gnome.SettingsDaemon.Power.service
+
+
+sudo systemctl --global enable dbus-broker.service
+sudo systemctl mask NetworkManager-wait-online.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.Wacom.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.PrintNotifications.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.Color.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.A11ySettings.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.UsbProtection.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.ScreensaverProxy.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.Sharing.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.Smartcard.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.Housekeeping.service
+sudo systemctl --user mask org.gnome.SettingsDaemon.Power.service
 
 
 
