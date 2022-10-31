@@ -23,6 +23,8 @@ sudo pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-load
 sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu fish adw-gtk3 --needed
 # tofi adw-gtk3
 
+yay -Syu tofi
+
 # net -->
 sudo pacman -Syu google-chrome telegram-desktop qbittorrent --needed
 
