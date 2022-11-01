@@ -4,13 +4,13 @@ sudo pacman -Syu
 sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key FBA220DFC880C036
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-sudo echo "[chaotic-aur]" >> /etc/pacman.conf
-sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+sudo sh -c "echo '[chaotic-aur' >> /etc/pacman.conf"
+sudo sh -c "echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf"
 
 sudo vim /etc/pacman.conf
 
 sudo pacman -Syyuu reflector rsync curl --needed
-sudo reflector --verbose --country 'Germany' -l 25 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --country 'Ukraine' -l 30 --sort rate --save /etc/pacman.d/mirrorlist
 
 # sys -->
 sudo pacman -Syu base-devel polkit-gnome asp dbus-broker bluez code git playerctl brightnessctl pamixer blueman pavucontrol python-pip yay android-tools neofetch grub-customizer gparted ccache bash-completion --needed
