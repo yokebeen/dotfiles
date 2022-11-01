@@ -13,7 +13,7 @@ sudo pacman -Syyuu reflector rsync curl --needed
 sudo reflector --verbose --country 'Ukraine' -l 30 --sort rate --save /etc/pacman.d/mirrorlist
 
 # sys -->
-sudo pacman -Syu base-devel polkit-gnome asp dbus-broker bluez code git playerctl brightnessctl pamixer blueman pavucontrol python-pip yay android-tools neofetch grub-customizer gparted ccache bash-completion --needed
+sudo pacman -Syu base-devel fish polkit-gnome asp dbus-broker bluez code git playerctl brightnessctl pamixer blueman pavucontrol python-pip yay android-tools neofetch grub-customizer gparted ccache bash-completion --needed
 sudo pacman -Syu lrzip unrar unzip unace p7zip squashfs-tools --needed
 
 sudo pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader --needed
@@ -67,3 +67,6 @@ sudo systemctl --user mask org.gnome.SettingsDaemon.Power.service
 
 systemctl enable --now kbct.service
 systemctl enable --now bluetooth.service
+
+sudo chsh -s /usr/bin/fish
+chsh -s /usr/bin/fish
