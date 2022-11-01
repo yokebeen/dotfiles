@@ -20,9 +20,6 @@ sudo pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-load
 
 # sway -->
 sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu adw-gtk3 --needed
-# tofi adw-gtk3
-
-yay -Syu tofi kbct-git --needed
 
 sudo pacman -Syu imv mpv --needed
 # net -->
@@ -35,6 +32,10 @@ sudo pacman -Syu gnome-browser-connector gnome-tweaks --needed
 sudo pacman -Rsn cheese eog epiphany evince gnome-calculator gnome-characters gnome-contacts gnome-font-viewer gnome-logs gnome-maps gnome-music gnome-photos gnome-software gnome-user-docs gnome-system-monitor gnome-video-effects
 
 sudo pacman -Syu cheese eog epiphany evince 
+
+sudo vim /etc/makepkg.conf
+# tofi adw-gtk3
+yay -Syu tofi kbct-git --needed
 
 systemctl --global enable dbus-broker.service
 systemctl mask NetworkManager-wait-online.service
