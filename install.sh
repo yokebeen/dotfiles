@@ -32,8 +32,9 @@ sudo pacman -Syu google-chrome telegram-desktop qbittorrent --needed
 sudo pacman -Syu gnome-browser-connector gnome-tweaks --needed
 
 # rm - xlam
-sudo pacman -Rsn epiphany cheese gnome-books gnome-calculator gnome-maps gnome-music gnome-weather gnome-photos gnome-software gnome-user-docs totem yelp vino gnome-user-share gnome-characters simple-scan eog rygel gnome-font-viewer gnome-remote-desktop gnome-logs orca
+sudo pacman -Rsn cheese eog epiphany evince gnome-calculator gnome-characters gnome-contacts gnome-font-viewer gnome-logs gnome-maps gnome-music gnome-photos gnome-software gnome-user-docs gnome-system-monitor gnome-video-effects
 
+sudo pacman -Syu cheese eog epiphany evince 
 
 systemctl --global enable dbus-broker.service
 systemctl mask NetworkManager-wait-online.service

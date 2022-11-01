@@ -1,6 +1,6 @@
 * {
 	font-size: 12px;
-	font-family: dejavu;
+	font-family: monospace;
 }
 
 window#waybar {
@@ -11,13 +11,13 @@ window#waybar {
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
 	color: #1a1a1a;
-	font-size: 20px;
+	font-size: 12px;
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
 	color: #292b2e;
 	background: #1a1a1a;
-	font-size: 20px;
+	font-size: 12px;
 }
 
 #workspaces,
