@@ -19,7 +19,7 @@ sudo pacman -Syu lrzip unrar unzip unace p7zip squashfs-tools --needed
 sudo pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader --needed
 
 # sway -->
-sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu adw-gtk3 --needed
+sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu adw-gtk3 mako --needed
 
 sudo pacman -Syu imv mpv --needed
 # net -->

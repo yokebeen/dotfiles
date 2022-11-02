@@ -10,6 +10,7 @@ output * bg /usr/share/backgrounds/gnome/licorice-d.webp fill
 # autostart
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id autotiling
+exec mako
 
 # apps binds
 bindsym --to-code Mod4+b exec $browser

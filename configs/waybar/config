@@ -43,7 +43,6 @@
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
-
 		"tray"
 	],
 
@@ -123,6 +122,6 @@
 		"path": "/"
 	},
 	"tray": {
-		"icon-size": 18
+		"icon-size": 20
 	}
 }
