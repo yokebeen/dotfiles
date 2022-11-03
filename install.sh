@@ -37,6 +37,11 @@ sudo vim /etc/makepkg.conf
 # tofi adw-gtk3
 yay -Syu tofi kbct-git --needed
 
+
+
+sudo pacman -Syu cherrytree
+
+
 systemctl --global enable dbus-broker.service
 systemctl mask NetworkManager-wait-online.service
 systemctl --user mask org.gnome.SettingsDaemon.Wacom.service
