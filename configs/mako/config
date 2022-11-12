@@ -1,10 +1,10 @@
 sort=-time
 layer=overlay
-background-color=#2e3440
-width=200
-height=70
+background-color=#000000
+width=400
+height=200
 border-size=2
-border-color=#88c0d0
+border-color=#161616
 border-radius=5
 icons=0
 max-icon-size=64
