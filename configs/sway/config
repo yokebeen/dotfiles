@@ -104,6 +104,7 @@ bindsym --to-code XF86AudioNext exec playerctl next
 
 
 
+include colorscheme
 
 bar {
 swaybar_command waybar 
@@ -117,8 +118,17 @@ input "type:keyboard" {
 input * accel_profile flat
 input * natural_scroll enabled
 
+
+
+#                       Border  BG      Text    Ind     Child Border
+client.focused          $base05 $base0D $base00 $base0D $base0D
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+
 default_border none
 default_border pixel 1
+
 
 
 include /etc/sway/config.d/*
