@@ -64,9 +64,6 @@ bindsym --to-code $mod+Shift+8 move container to workspace number 8
 bindsym --to-code $mod+Shift+9 move container to workspace number 9
 bindsym --to-code $mod+Shift+0 move container to workspace number 10
 
-#bindsym --to-code $mod+s layout stacking
-#bindsym --to-code $mod+w layout tabbed
-#bindsym --to-code $mod+e layout toggle split
 
 bindsym --to-code $mod+f fullscreen
 
@@ -82,6 +79,12 @@ bindsym --to-code Return mode "default"
 bindsym --to-code Escape mode "default"
 }
 bindsym --to-code $mod+r mode "resize"
+
+
+mode "gaming" {
+bindsym --to-code Shift+Control+Escape mode "default"
+}
+bindsym --to-code Shift+Control+Escape mode "gaming"
 
 
 bindsym --to-code Mod4+Shift+s exec grimshot save area
@@ -112,6 +115,7 @@ input "type:keyboard" {
     xkb_options grp:caps_toggle
 }
 input * accel_profile flat
+input * natural_scroll enabled
 
 default_border none
 default_border pixel 1
