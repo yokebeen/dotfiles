@@ -116,8 +116,12 @@ input "type:keyboard" {
     xkb_options grp:caps_toggle
 }
 input * accel_profile flat
-input * natural_scroll enabled
+input 7435:33:YCK-092A_USB_KB_&_TouchPad_Mouse natural_scroll enabled
 
+
+#output eDP-1 subpixel rgb|bgr|vrgb|vbgr|none
+output eDP-1 subpixel bgr
+#output eDP-1 adaptive_sync on
 
 
 #                       Border  BG      Text    Ind     Child Border
@@ -129,6 +133,7 @@ client.urgent           $base08 $base08 $base00 $base08 $base08
 default_border none
 default_border pixel 1
 
+smart_borders on
 
 
 include /etc/sway/config.d/*
