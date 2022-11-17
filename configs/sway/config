@@ -103,9 +103,6 @@ bindsym --to-code XF86AudioPrev exec playerctl previous
 bindsym --to-code XF86AudioNext exec playerctl next
 
 
-
-include colorscheme
-
 bar {
 swaybar_command waybar 
 }
@@ -115,6 +112,7 @@ input "type:keyboard" {
     # xkb_variant ,nodeadkeys
     xkb_options grp:caps_toggle
 }
+
 input * accel_profile flat
 input 7435:33:YCK-092A_USB_KB_&_TouchPad_Mouse natural_scroll enabled
 
@@ -123,7 +121,7 @@ input 7435:33:YCK-092A_USB_KB_&_TouchPad_Mouse natural_scroll enabled
 output eDP-1 subpixel bgr
 #output eDP-1 adaptive_sync on
 
-
+include colorscheme
 #                       Border  BG      Text    Ind     Child Border
 client.focused          $base05 $base0D $base00 $base0D $base0D
 client.focused_inactive $base01 $base01 $base05 $base03 $base01
