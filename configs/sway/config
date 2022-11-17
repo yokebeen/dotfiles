@@ -66,8 +66,8 @@ bindsym --to-code $mod+Shift+0 move container to workspace number 10
 
 
 bindsym --to-code $mod+f fullscreen
-
 bindsym --to-code $mod+Shift+f floating toggle
+
 
 mode "resize" {
 bindsym --to-code Left resize shrink width 10px
