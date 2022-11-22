@@ -1,4 +1,4 @@
-- keyboards: [ "YCK-092A USB KB & TouchPad"]
+- keyboards: ["YCK-092A USB KB & TouchPad"]
 
   keymap:
     rightalt: dot
