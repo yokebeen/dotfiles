@@ -88,7 +88,7 @@ bindsym --to-code Shift+Control+Escape mode "gaming"
 
 
 bindsym --to-code Mod4+Shift+s exec grimshot save area
-bindsym --to-code Mod4+s exec grimshot save active 
+bindsym --to-code Mod4+s exec grimshot save output
 
 
 bindsym --to-code Shift+Control+down exec brightnessctl set 1%-
