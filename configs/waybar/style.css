@@ -3,7 +3,7 @@
 	border-radius: 0;
 	font-family: ttf-dejavu;
 	font-size: 12px;
-	min-height: 0;
+	min-height: 18px;
 }
 
 window#waybar {
