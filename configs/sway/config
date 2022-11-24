@@ -94,7 +94,7 @@ bindsym --to-code Mod4+s exec grimshot save output
 bindsym --to-code Shift+Control+down exec brightnessctl set 1%-
 bindsym --to-code Shift+Control+up exec brightnessctl set +1%
 bindsym --to-code XF86AudioLowerVolume exec pamixer -d 5
-bindsym --to-code XF86AudioRaiseVolume exec pamixer -i 5 --allow-boost
+bindsym --to-code XF86AudioRaiseVolume exec pamixer -i 5
 bindsym --to-code XF86AudioMute exec pamixer -t
 bindsym --to-code XF86AudioMicMute exec pamixer --default-source -t
 bindsym --to-code XF86AudioPlay exec playerctl play-pause
