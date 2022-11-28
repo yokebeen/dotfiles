@@ -12,34 +12,51 @@ sudo vim /etc/pacman.conf
 sudo pacman -Syyuu reflector rsync curl --needed
 sudo reflector --verbose --country 'Ukraine' -l 30 --sort rate --save /etc/pacman.d/mirrorlist
 
-# sys -->
-sudo pacman -Syu base-devel fish polkit-gnome asp dbus-broker bluez code git playerctl brightnessctl pamixer blueman pavucontrol python-pip yay android-tools neofetch grub-customizer gparted ccache bash-completion --needed
+### sys -->
+sudo pacman -Syu linux linux-firmware linux-headers base-devel dbus-broker ccache bash-completion --needed
+#archive
 sudo pacman -Syu lrzip unrar unzip unace p7zip squashfs-tools --needed
-
+#sound
+sudo pacman -Syu bluez playerctl pamixer blueman pavucontrol noisetorch easyeffects calf lsp-plugins zam-plagins mda.lv2 --needed
+#graphics
 sudo pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader --needed
+#grub
+sudo pacman -Syu grub-customizer --needed
+#disk
+sudo pacman -Syu gparted --needed
+#python
+sudo pacman -Syu python-pip --needed
+#terminal
+sudo pacman -Syu gnome-terminal fish git asp yay neofetch --needed
+#adb
+sudo pacman -Syu android-tools --needed
 
-# sway -->
-sudo pacman -Syu sway waybar autotiling grimshot swaybg wl-clipboard ttf-dejavu adw-gtk3 mako --needed
+### editor
+sudo pacman -Syu code --needed
 
-sudo pacman -Syu imv mpv --needed
-# net -->
-sudo pacman -Syu google-chrome telegram-desktop qbittorrent --needed
+### net -->
+sudo pacman -Syu google-chrome telegram-desktop discord qbittorrent --needed
 
-# gnome -->
+
+### gnome -->
 sudo pacman -Syu gnome-browser-connector gnome-tweaks --needed
-
 # rm - xlam
 sudo pacman -Rsn cheese eog epiphany evince gnome-calculator gnome-characters gnome-contacts gnome-font-viewer gnome-logs gnome-maps gnome-music gnome-photos gnome-software gnome-user-docs gnome-system-monitor gnome-video-effects
 
-sudo pacman -Syu cheese eog epiphany evince 
+
+### sway -->
+sudo pacman -Syu sway waybar autotiling polkit-gnome grimshot swaybg wl-clipboard ttf-dejavu adw-gtk3 mako --needed
+#video and photo
+sudo pacman -Syu imv mpv --needed
+
+
+### notebook
+sudo pacman -Syu brightnessctl --needed
+
 
 sudo vim /etc/makepkg.conf
 # tofi adw-gtk3
 yay -Syu tofi kbct-git --needed
-
-
-
-sudo pacman -Syu cherrytree
 
 
 systemctl --global enable dbus-broker.service
@@ -76,3 +93,7 @@ systemctl enable --now bluetooth.service
 
 sudo chsh -s /usr/bin/fish
 chsh -s /usr/bin/fish
+
+
+#good soft
+# sudo pacman -Syu cherrytree
