@@ -17,7 +17,8 @@ sudo pacman -Syu linux linux-firmware linux-headers base-devel dbus-broker ccach
 #archive
 sudo pacman -Syu lrzip unrar unzip unace p7zip squashfs-tools --needed
 #sound
-sudo pacman -Syu bluez playerctl pamixer blueman pavucontrol noisetorch easyeffects calf lsp-plugins zam-plagins mda.lv2 --needed
+sudo pacman -Syu bluez playerctl pamixer blueman pavucontrol easyeffects calf lsp-plugins zam-plugins mda.lv2 --needed
+#noisetorch
 #graphics
 sudo pacman -Syu mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader --needed
 #grub
@@ -35,7 +36,7 @@ sudo pacman -Syu android-tools --needed
 sudo pacman -Syu code --needed
 
 ### net -->
-sudo pacman -Syu google-chrome telegram-desktop discord qbittorrent --needed
+sudo pacman -Syu google-chrome telnegram-desktop discord qbittorrent --needed
 
 
 ### gnome -->

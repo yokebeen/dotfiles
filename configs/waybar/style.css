@@ -15,14 +15,14 @@ window#waybar {
 #custom-left-arrow-dark {
 	color: #000000;
 	padding: 0px 0px;
-	font-size: 12px;
+	font-size: 14px;
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
 	color: #161616;
 	background: #000000;
 	padding: 0px 0px;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 #workspaces,
