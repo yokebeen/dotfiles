@@ -1,4 +1,4 @@
-anchor = down
+#anchor = down
 width = 50%
 height = 20
 horizontal = true

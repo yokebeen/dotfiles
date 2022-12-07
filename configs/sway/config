@@ -3,14 +3,27 @@ set $term gnome-terminal
 set $browser google-chrome-stable
 set $menu tofi-drun --drun-launch=true
 set $run tofi-run | xargs swaymsg exec --
+set $clipboard cliphist list | tofi | cliphist decode | wl-copy
+set $clipboard-del cliphist list | tofi | cliphist delete
 
 
 output * bg /usr/share/backgrounds/gnome/licorice-d.webp fill
 
 # autostart
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id autotiling
+#exec --no-startup-id autotiling
 exec mako
+#exec_always {
+#  gsettings set org.gnome.desktop.interface gtk-theme "$gtk-theme"
+#  gsettings set org.gnome.desktop.interface icon-theme "$icon-theme"
+#  gsettings set org.gnome.desktop.interface cursor-theme "$cursor-theme"
+#  gsettings set org.gnome.desktop.interface font-name "$gui-font"
+#}
+exec {
+    '[ -x "$(command -v autotiling)" ] && autotiling'
+    '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch cliphist store'
+    '[ -x "$(command -v wl-paste)" ] && [ -x "$(command -v cliphist)" ] && wl-paste --watch pkill -RTMIN+9 waybar'
+}
 
 # apps binds
 bindsym --to-code Mod4+b exec $browser
@@ -24,6 +37,10 @@ bindsym --to-code Mod1+q kill
 
 bindsym --to-code $mod+space exec $menu
 bindsym --to-code Mod4+space exec $run
+bindsym --to-code Mod4+v exec $clipboard
+bindsym --to-code Mod4+Shift+v exec $clipboard-del
+
+
 
 floating_modifier $mod normal
 

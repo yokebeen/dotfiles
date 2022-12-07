@@ -46,7 +46,7 @@ sudo pacman -Rsn cheese eog epiphany evince gnome-calculator gnome-characters gn
 
 
 ### sway -->
-sudo pacman -Syu sway waybar autotiling polkit-gnome grimshot swaybg wl-clipboard ttf-dejavu adw-gtk3 mako --needed
+sudo pacman -Syu sway waybar autotiling polkit-gnome grimshot swaybg wl-clipboard cliphist ttf-dejavu adw-gtk3 mako --needed
 #video and photo
 sudo pacman -Syu imv mpv --needed
 
