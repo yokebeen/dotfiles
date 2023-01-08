@@ -109,8 +109,6 @@ bindsym --to-code Mod4+Shift+s exec grimshot save area
 bindsym --to-code Mod4+s exec grimshot save output
 
 
-bindsym --to-code Shift+Control+down exec brightnessctl set 1%-
-bindsym --to-code Shift+Control+up exec brightnessctl set +1%
 bindsym --to-code XF86AudioLowerVolume exec pamixer -d 5
 bindsym --to-code XF86AudioRaiseVolume exec pamixer -i 5
 bindsym --to-code XF86AudioMute exec pamixer -t
@@ -132,12 +130,7 @@ input "type:keyboard" {
 }
 
 input * accel_profile flat
-input 7435:33:YCK-092A_USB_KB_&_TouchPad_Mouse natural_scroll enabled
 
-
-#output eDP-1 subpixel rgb|bgr|vrgb|vbgr|none
-output eDP-1 subpixel bgr
-#output eDP-1 adaptive_sync on
 
 include colorscheme
 #                       Border  BG      Text    Ind     Child Border
