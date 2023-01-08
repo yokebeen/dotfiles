@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-	background: #161616;
+	background: #414141;
 	color: #fdf6e3;
 }
 
@@ -19,7 +19,7 @@ window#waybar {
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
-	color: #161616;
+	color: #414141;
 	background: #000000;
 	padding: 0px 0px;
 	font-size: 14px;
