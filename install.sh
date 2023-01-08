@@ -36,7 +36,7 @@ sudo pacman -Syu android-tools --needed
 sudo pacman -Syu code --needed
 
 ### net -->
-sudo pacman -Syu google-chrome telnegram-desktop discord qbittorrent --needed
+sudo pacman -Syu google-chrome telegram-desktop discord qbittorrent --needed
 
 
 ### gnome -->
