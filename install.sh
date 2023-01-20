@@ -4,13 +4,13 @@ sudo pacman -Syu
 sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key FBA220DFC880C036
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-sudo sh -c "echo '[chaotic-aur' >> /etc/pacman.conf"
+sudo sh -c "echo '[chaotic-aur]' >> /etc/pacman.conf"
 sudo sh -c "echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf"
 
 sudo vim /etc/pacman.conf
 
 sudo pacman -Syyuu reflector rsync curl --needed
-sudo reflector --verbose --country 'Ukraine' -l 30 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --country 'Germany' -l 30 --sort rate --save /etc/pacman.d/mirrorlist
 
 ### sys -->
 sudo pacman -Syu linux linux-firmware linux-headers base-devel dbus-broker ccache bash-completion --needed
@@ -51,13 +51,9 @@ sudo pacman -Syu sway waybar autotiling wmname polkit-gnome grimshot swaybg wl-c
 sudo pacman -Syu imv mpv --needed
 
 
-### notebook
-sudo pacman -Syu brightnessctl --needed
-
-
 sudo vim /etc/makepkg.conf
 # tofi adw-gtk3
-yay -Syu tofi kbct-git --needed
+yay -Syu tofi --needed
 
 
 systemctl --global enable dbus-broker.service
@@ -88,8 +84,6 @@ sudo systemctl --user mask org.gnome.SettingsDaemon.Housekeeping.service
 sudo systemctl --user mask org.gnome.SettingsDaemon.Power.service
 
 
-
-systemctl enable --now kbct.service
 systemctl enable --now bluetooth.service
 
 sudo chsh -s /usr/bin/fish
