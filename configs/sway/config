@@ -137,7 +137,10 @@ input "type:keyboard" {
 input * accel_profile flat
 input 7435:33:YCK-092A_USB_KB_&_TouchPad_Mouse natural_scroll enabled
 
-
+output DVI-D-1 {
+   # ...config options...
+   mode 1440x900@74.984Hz
+}
 
 include colorscheme
 #                       Border  BG      Text    Ind     Child Border
