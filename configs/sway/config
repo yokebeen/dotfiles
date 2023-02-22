@@ -15,6 +15,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec wmname LG3D
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r
+exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
 
 #exec_always {
 #  gsettings set org.gnome.desktop.interface gtk-theme "$gtk-theme"
@@ -120,6 +121,8 @@ bindsym --to-code XF86AudioStop exec playerctl stop
 bindsym --to-code XF86AudioPrev exec playerctl previous
 bindsym --to-code XF86AudioNext exec playerctl next
 
+bindsym --to-code Shift+Control+down exec brightnessctl set 1%-
+bindsym --to-code Shift+Control+up exec brightnessctl set +1%
 
 bar {
 swaybar_command waybar 
@@ -132,6 +135,8 @@ input "type:keyboard" {
 }
 
 input * accel_profile flat
+input 7435:33:YCK-092A_USB_KB_&_TouchPad_Mouse natural_scroll enabled
+
 
 
 include colorscheme
